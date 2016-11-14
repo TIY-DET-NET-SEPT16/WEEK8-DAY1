@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>JQuery!</title>
+
+	<style type="text/css">
+		a.test{
+			font-weight: bold;
+		}
+	</style>
+
+</head>
+<body>
+	<a href="http://google.com" class="test">Google ALL the Things!</a>
+
+	<script src="jquery-3.1.1.js"></script>
+
+	<script type="text/javascript">
+
+		//Doesn't run until entire page has loaded
+		// window.onload = function() {
+		// 	alert("Hello");
+		// }
+
+		//This is a better way, runs as soon as the document is ready
+		$(document).ready(function() {
+			// alert("Hello Again");
+			$("a").click ( function( event ) {
+				// alert("You clicked the link!");
+				//$("a").addClass("test");
+				//$("a").removeClass("test");
+				event.preventDefault();
+				$(this).hide("slow");
+			});
+		});
+
+	</script>
+</body>
+</html>
